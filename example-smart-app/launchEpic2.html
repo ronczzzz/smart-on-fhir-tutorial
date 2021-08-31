@@ -24,13 +24,10 @@
     <!-- Prevent session bleed caused by single threaded embedded browser and sessionStorage API -->
     <!-- https://github.com/cerner/fhir-client-cerner-additions -->
     <script src='./lib/js/fhir-client-cerner-additions-1.0.0.js'></script>
-
-    <!-- Currently, the SMART App Launcher (https://launch.smarthealthit.org) does not check/validate the client_id field.
-        If/when this changes, or when working with other authorization servers, please update the client_id field here. -->
     <script>
       FHIR.oauth2.authorize({
         'client_id': '9e84cfec-635d-4b6f-af93-52c740c96c32',
-        'scope':  'patient/Patient.read patient/Observation.read launch online_access openid profile'
+        'scope':  'launch'
       });
     </script>
     <div class="spinner">
